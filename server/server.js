@@ -5,9 +5,10 @@ const app = express()
 
 app.use(express.json())
 
-const {home} = require("./controllers/pageCtrl")
+const {home, css} = require("./controllers/pageCtrl")
 
 app.get("/", home)
+app.get("/css", css)
 
 const { PORT } = process.env
 
